@@ -1,21 +1,25 @@
 def sumar(a, b):
-    return a+b
+    try:
+        return a+b
+    except ValueError:
+        print("Error: Tipo de dato no válido")
+
 def restar(a, b):
-    return a-b
+    try:
+        return a-b
+    except ValueError:
+        print("Error: Tipo de dato no válido")
+
 def producto(a, b):
-    return a*b
+    try:
+        return a*b
+    except ValueError:
+        print("Error: Tipo de dato no válido")
+        
 def division(a, b):
-    return a/b
-
-def errorZero(a, b):
     try:
-        division
+        return a/b
     except ZeroDivisionError:
-        print("No es posible dividir entre cero")
+        print("Error: No se puede dividir entre cero")
 
-def TypeError(a, b):
-    try:
-        a, b= int(a), int(b)
-    except TypeError:
-        print("No se puede sumar texto y un número")
 

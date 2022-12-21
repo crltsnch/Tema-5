@@ -1,22 +1,21 @@
-a = input("Ingrese un número: ")
-b = input("Ingrese otro número: ")
-
-def sumar():
+def sumar(a, b):
     return a+b
-def restar():
+def restar(a, b):
     return a-b
-def producto():
+def producto(a, b):
     return a*b
-def division():
-    resultado=a/b
+def division(a, b):
+    return a/b
+
+def errorZero(a, b):
     try:
-        b=0
+        division
     except ZeroDivisionError:
         print("No es posible dividir entre cero")
-    return resultado
-try:
-    a=str
-    b=str
-except TypeError:
-    print("No se puede sumar texto y un número")
+
+def TypeError(a, b):
+    try:
+        a, b= int(a), int(b)
+    except TypeError:
+        print("No se puede sumar texto y un número")
 

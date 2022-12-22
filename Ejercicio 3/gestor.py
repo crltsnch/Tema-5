@@ -1,4 +1,5 @@
 from io import open
+from logging.config import _RootLoggerConfiguration
 import pickle
 
 class Personaje:
@@ -19,5 +20,8 @@ class Gestor:
         self.personajes.append(p)
         self.guardar()
 
-    def 
+    def mostrar(self):
+        if len(self.persoanjes) == 0:
+            print('No hay personajes, el fichero esá vacio')
+            return
 

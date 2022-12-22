@@ -5,7 +5,7 @@ def main():
     contenido = fichero.readline()
 
     if len(contenido) == 0:
-        contenido = 0
+        contenido = '0'
         fichero.write(contenido)
     fichero.close()
 

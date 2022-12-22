@@ -8,3 +8,16 @@ class Personaje:
         self.ataque = ataque
         self.defensa = defensa
         self.alcance = alcance
+    
+class Gestor:
+    personajes = []
+
+    def añadir(self, p):
+        for personaje in self.personajes:
+            if personaje.nombre == p.nombre:
+                return
+        self.personajes.append(p)
+        self.guardar()
+
+    def 
+

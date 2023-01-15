@@ -26,7 +26,14 @@ class Gestor:
         self.personajes.append(p)
         self.guardar()
     
-    
+    def borrar(self, nombre):
+        for personaje in self.personajes:
+            if personaje.nombre == nombre:
+                self.personajes.remove(personaje)
+                self.guardar()
+                print('Personaje {} borrado correctamente'.format(nombre))
+                return
+        print('No se ha encontrado el personaje {}'. format(nombre))
 
     def mostrar(self):
         if len(self.persoanjes) == 0:

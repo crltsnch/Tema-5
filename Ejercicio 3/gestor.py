@@ -1,5 +1,4 @@
 from io import open
-from logging.config import _RootLoggerConfiguration
 import pickle
 
 class Personaje:
@@ -10,8 +9,15 @@ class Personaje:
         self.defensa = defensa
         self.alcance = alcance
     
+    def __str__(self):
+        return '{} => Propiedades: {} Ataque: {} Defensa: {} Alcance: {}'.format(self.nombre, self.propiedades, self.ataque, self.defensa, self.alcance)
+
+    
 class Gestor:
     personajes = []
+
+    def __init__(self):
+        self.cargar()
 
     def añadir(self, p):
         for personaje in self.personajes:
@@ -19,6 +25,8 @@ class Gestor:
                 return
         self.personajes.append(p)
         self.guardar()
+    
+    
 
     def mostrar(self):
         if len(self.persoanjes) == 0:

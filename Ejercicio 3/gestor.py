@@ -29,3 +29,15 @@ class Gestor:
     
     def cargar(self):
         fichero = open('personajes.pckl', 'ab+')
+        fichero.seek(0)
+        try:
+            self.personajes = pickle.load(fichero)
+        except:
+            print('fichero vacío')
+        finally:
+            fichero.close()
+    
+    def guardar(self):
+        fichero = open('personajes.pckl', 'wb')
+        pickle.dump(self.persoanajes, fichero)
+        fichero.close()

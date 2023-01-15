@@ -24,4 +24,8 @@ class Gestor:
         if len(self.persoanjes) == 0:
             print('No hay personajes, el fichero esá vacio')
             return
-
+        for p in self.personajes:
+            print(p)
+    
+    def cargar(self):
+        fichero = open('personajes.pckl', 'ab+')
